@@ -6,12 +6,12 @@ using System.Resources;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Mission Planner")]
-[assembly: AssemblyDescription("Mission Planner")]
+[assembly: AssemblyTitle("Sabre Sky")]
+[assembly: AssemblyDescription("Sabre Sky")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Michael Oborne")]
-[assembly: AssemblyProduct("Mission Planner")]
-[assembly: AssemblyCopyright("Copyright © Michael Oborne 2010-2014")]
+[assembly: AssemblyCompany("Sabre UAV")]
+[assembly: AssemblyProduct("Sabre Sky")]
+[assembly: AssemblyCopyright("Copyright © SabreSky 2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -33,8 +33,8 @@ using System.Resources;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.1.*")]
-[assembly: AssemblyFileVersion("1.3.10")]
+[assembly: AssemblyVersion("0.1.*")]
+[assembly: AssemblyFileVersion("0.1")]
 [assembly: NeutralResourcesLanguageAttribute("")]
 
 [assembly: AssemblyDelaySign(false)]

@@ -271,12 +271,12 @@ namespace MissionPlanner
             if (Advanced == false)
             {
                 MenuTerminal.Visible = false;
-                // MenuSimulation.Visible = false;
+                MenuSimulation.Visible = false;
             }
             else
             {
                 MenuTerminal.Visible = true;
-                //MenuSimulation.Visible = true;
+                MenuSimulation.Visible = true;
             }
         }
 
@@ -309,6 +309,7 @@ namespace MissionPlanner
             MenuInitConfig.Visible = false;
             MenuConfigTune.Visible = false;
             MenuTerminal.Visible = false;
+            MenuSimulation.Visible = false;
 
 
             //startup console
@@ -2229,6 +2230,7 @@ namespace MissionPlanner
                 MenuInitConfig.Visible = true;
                 MenuConfigTune.Visible = true;
                 MenuTerminal.Visible = true;
+                MenuTerminal.Visible = true;
 
                 return true;
             }
@@ -2237,6 +2239,7 @@ namespace MissionPlanner
             {
                 MenuInitConfig.Visible = false;
                 MenuConfigTune.Visible = false;
+                MenuTerminal.Visible = false;
                 MenuTerminal.Visible = false;
 
                 return true;
