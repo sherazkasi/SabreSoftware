@@ -145,6 +145,9 @@
   <data name="FW icons 2013+logos-06" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FW icons 2013+logos-06.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Help1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Help1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="dark_disconnect_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\dark_disconnect_icon.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -169,11 +172,14 @@
   <data name="up" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\up.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="dark_flightdata_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dark_flightdata_icon.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="dark_terminal_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dark_terminal_icon.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="quadframesnormal_01" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\quadframesnormal_01.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Antenna Tracker-01" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Antenna Tracker-01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="apmp6" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\apmp6.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -223,8 +229,8 @@
   <data name="quadframesnormal_06" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\quadframesnormal_06.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="quadicon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\quad2.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Sabre Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sabre Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="marker_05" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\marker_05.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -256,11 +262,17 @@
   <data name="PlusFramesGreen_06" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PlusFramesGreen_06.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="marker_01" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\marker_01.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="heli" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\heli.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="airspeed" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BR-0004-03-2.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="InitialSetup" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\InitialSetup.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="quadicon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\quad2.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Hframelight" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Hframelight.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -295,9 +307,6 @@
   <data name="quadhover_05" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\quadhover_05.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="BR-APMPWRDEAN-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BR-APMPWRDEAN-2.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="quadframesnormal_12" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\quadframesnormal_12.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -307,20 +316,23 @@
   <data name="px4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\px4.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Sabre120x30" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sabre120x30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="iconWarning32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iconWarning32.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="dark_terminal_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dark_terminal_icon.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="quad" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\frames-03.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="quadhover_01" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\quadhover_01.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="marker_01" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\marker_01.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="hexa" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\frames-07.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sabre120x301" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sabre120x30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="light_disconnect_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\light_disconnect_icon.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -376,20 +388,23 @@
   <data name="FW icons 2013+logos-09" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FW icons 2013+logos-09.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="InitialConfig" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\InitialConfig.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="quadx" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\frames-04.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="light_initialsetup_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\light_initialsetup_icon.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="dark_flightdata_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dark_flightdata_icon.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FightDataIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FightDataIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="light_06" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\light_06.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cameraGimalRoll1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cameraGimalRoll1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="heli" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\heli.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="quadhover_03" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\quadhover_03.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -470,6 +485,9 @@ Please visit {\field{\*\fldinst{HYPERLINK "www.diydrones.com"}}{\fldrslt{\ul\cf2
   <data name="pixhawk" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pixhawk.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="worldwide51" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\worldwide51.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="y6a" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\y6.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -500,8 +518,8 @@ Please visit {\field{\*\fldinst{HYPERLINK "www.diydrones.com"}}{\fldrslt{\ul\cf2
   <data name="iconWarning48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iconWarning48.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="calibration02" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\calibration02.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="BR-APMPWRDEAN-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BR-APMPWRDEAN-2.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cameraGimalYaw" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cameraGimalYaw.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -536,11 +554,20 @@ Please visit {\field{\*\fldinst{HYPERLINK "www.diydrones.com"}}{\fldrslt{\ul\cf2
   <data name="rover_10" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\rover-10.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="down" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\down.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="apmp1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\apmp1.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="connect" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\connect.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="marker_02" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\marker_02.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="light_initialsetup_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\light_initialsetup_icon.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="bgdark" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bgdark.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -559,6 +586,33 @@ Please visit {\field{\*\fldinst{HYPERLINK "www.diydrones.com"}}{\fldrslt{\ul\cf2
   </data>
   <data name="quadframesnormal_03" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\quadframesnormal_03.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bg.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FlightSimulation1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FlightSimulation1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="opticalflow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BR-0016-01-3T.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="calibration02" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\calibration02.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="calibration01" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\calibration01.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="apm2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\apm2.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="terminal1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\terminal1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="frames_06" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\frames-06.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="quadhover_01" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\quadhover_01.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="Gaugebg" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -1604,24 +1658,6 @@ Please visit {\field{\*\fldinst{HYPERLINK "www.diydrones.com"}}{\fldrslt{\ul\cf2
         3o5C0tQKJEgtM+TtyX8/+K8HESdsf/nL/x+OG4Xa1W0W3gAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="opticalflow" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BR-0016-01-3T.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="down" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\down.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="calibration01" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\calibration01.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="apm2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\apm2.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bg.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="frames_06" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\frames-06.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="apmp3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\apmp3.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -1634,7 +1670,7 @@ Please visit {\field{\*\fldinst{HYPERLINK "www.diydrones.com"}}{\fldrslt{\ul\cf2
   <data name="marker_07" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\marker_07.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Antenna Tracker-01" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Antenna Tracker-01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="SabreSky SplashScreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SabreSky SplashScreen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

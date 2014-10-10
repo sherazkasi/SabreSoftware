@@ -104,7 +104,7 @@ namespace MissionPlanner
                 MissionPlanner.Controls.BackstageView.BackstageView.Advanced = value;
 
                 if (AdvancedChanged != null)
-                    AdvancedChanged(null ,new EventArgs());
+                    AdvancedChanged(null, new EventArgs());
             }
         }
 
@@ -271,12 +271,12 @@ namespace MissionPlanner
             if (Advanced == false)
             {
                 MenuTerminal.Visible = false;
-                MenuSimulation.Visible = false;
+                // MenuSimulation.Visible = false;
             }
             else
             {
                 MenuTerminal.Visible = true;
-                MenuSimulation.Visible = true;
+                //MenuSimulation.Visible = true;
             }
         }
 
@@ -303,7 +303,13 @@ namespace MissionPlanner
 
             View = MyView;
 
-            AdvancedChanged += updateAdvanced;
+            //  AdvancedChanged += updateAdvanced;
+            //SK: Don't need password protection on menues. this can be enable if requires in the future. 
+
+            MenuInitConfig.Visible = false;
+            MenuConfigTune.Visible = false;
+            MenuTerminal.Visible = false;
+
 
             //startup console
             TCPConsole.Write((byte)'S');
@@ -595,18 +601,18 @@ namespace MissionPlanner
 
             if (Program.Logo != null && Program.vvvvz)
             {
-                MenuDonate.Click -= this.toolStripMenuItem1_Click;
-                MenuDonate.Text = "";
-                MenuDonate.Image = Program.Logo;
+                //MenuDonate.Click -= this.toolStripMenuItem1_Click;
+                //MenuDonate.Text = "";
+                //MenuDonate.Image = Program.Logo;
 
-                MenuDonate.Click += MenuCustom_Click;
+                //MenuDonate.Click += MenuCustom_Click;
 
                 MenuFlightData.Visible = false;
                 MenuFlightPlanner.Visible = true;
                 MenuConfigTune.Visible = false;
                 MenuHelp.Visible = false;
                 MenuInitConfig.Visible = false;
-                MenuSimulation.Visible = false;
+                //MenuSimulation.Visible = false;
                 MenuTerminal.Visible = false;
             }
 
@@ -650,7 +656,7 @@ namespace MissionPlanner
                 MenuConfigTune.Visible = true;
                 MenuHelp.Visible = true;
                 MenuInitConfig.Visible = true;
-                MenuSimulation.Visible = true;
+                // MenuSimulation.Visible = true;
                 MenuTerminal.Visible = true;
             }
             else
@@ -662,7 +668,7 @@ namespace MissionPlanner
                     MenuConfigTune.Visible = true;
                     MenuHelp.Visible = true;
                     MenuInitConfig.Visible = true;
-                    MenuSimulation.Visible = true;
+                    //MenuSimulation.Visible = true;
                     MenuTerminal.Visible = true;
                 }
             }
@@ -933,8 +939,9 @@ namespace MissionPlanner
                     {
                         comPort.BaseStream.BaudRate = int.Parse(_connectionControl.CMB_baudrate.Text);
                     }
-                    catch (Exception exp) {
-                        log.Error(exp); 
+                    catch (Exception exp)
+                    {
+                        log.Error(exp);
                     }
 
                     // prevent serialreader from doing anything
@@ -990,63 +997,60 @@ namespace MissionPlanner
                         // we have more than one mav
                         int todo;
                         // user selection of sysid
-                        MissionPlanner.Controls.SysidSelector id = new SysidSelector();
-
-                        id.ShowDialog();
                     }
 
                     comPort.getParamList();
-                        
+
                     // detect firmware we are conected to.
-                        if (comPort.MAV.cs.firmware == Firmwares.ArduCopter2)
-                        {
-                            _connectionControl.TOOL_APMFirmware.SelectedIndex = _connectionControl.TOOL_APMFirmware.Items.IndexOf(Firmwares.ArduCopter2);
-                        }
-                        else if (comPort.MAV.cs.firmware == Firmwares.Ateryx)
-                        {
-                            _connectionControl.TOOL_APMFirmware.SelectedIndex = _connectionControl.TOOL_APMFirmware.Items.IndexOf(Firmwares.Ateryx);
-                        }
-                        else if (comPort.MAV.cs.firmware == Firmwares.ArduRover)
-                        {
-                            _connectionControl.TOOL_APMFirmware.SelectedIndex = _connectionControl.TOOL_APMFirmware.Items.IndexOf(Firmwares.ArduRover);
-                        }
-                        else if (comPort.MAV.cs.firmware == Firmwares.ArduPlane)
-                        {
-                            _connectionControl.TOOL_APMFirmware.SelectedIndex = _connectionControl.TOOL_APMFirmware.Items.IndexOf(Firmwares.ArduPlane);
-                        }
+                    if (comPort.MAV.cs.firmware == Firmwares.ArduCopter2)
+                    {
+                        _connectionControl.TOOL_APMFirmware.SelectedIndex = _connectionControl.TOOL_APMFirmware.Items.IndexOf(Firmwares.ArduCopter2);
+                    }
+                    else if (comPort.MAV.cs.firmware == Firmwares.Ateryx)
+                    {
+                        _connectionControl.TOOL_APMFirmware.SelectedIndex = _connectionControl.TOOL_APMFirmware.Items.IndexOf(Firmwares.Ateryx);
+                    }
+                    else if (comPort.MAV.cs.firmware == Firmwares.ArduRover)
+                    {
+                        _connectionControl.TOOL_APMFirmware.SelectedIndex = _connectionControl.TOOL_APMFirmware.Items.IndexOf(Firmwares.ArduRover);
+                    }
+                    else if (comPort.MAV.cs.firmware == Firmwares.ArduPlane)
+                    {
+                        _connectionControl.TOOL_APMFirmware.SelectedIndex = _connectionControl.TOOL_APMFirmware.Items.IndexOf(Firmwares.ArduPlane);
+                    }
 
                     // check for newer firmware
-                      var softwares = Firmware.LoadSoftwares();
+                    var softwares = Firmware.LoadSoftwares();
 
-                      if (softwares.Count > 0)
-                      {
-                          try
-                          {
-                              string[] fields1 = comPort.MAV.VersionString.Split(' ');
+                    if (softwares.Count > 0)
+                    {
+                        try
+                        {
+                            string[] fields1 = comPort.MAV.VersionString.Split(' ');
 
-                              foreach (Firmware.software item in softwares)
-                              {
-                                  string[] fields2 = item.name.Split(' ');
+                            foreach (Firmware.software item in softwares)
+                            {
+                                string[] fields2 = item.name.Split(' ');
 
-                                  // check primare firmware type. ie arudplane, arducopter
-                                  if (fields1[0] == fields2[0])
-                                  {
-                                      Version ver1 = VersionDetection.GetVersion(comPort.MAV.VersionString);
-                                      Version ver2 = VersionDetection.GetVersion(item.name);
+                                // check primare firmware type. ie arudplane, arducopter
+                                if (fields1[0] == fields2[0])
+                                {
+                                    Version ver1 = VersionDetection.GetVersion(comPort.MAV.VersionString);
+                                    Version ver2 = VersionDetection.GetVersion(item.name);
 
-                                      if (ver2 > ver1)
-                                      {
-                                          Common.MessageShowAgain("New Firmware","New firmware available\n" + item.name + "\nPlease upgrade");
-                                          break;
-                                      }
+                                    if (ver2 > ver1)
+                                    {
+                                        Common.MessageShowAgain("New Firmware", "New firmware available\n" + item.name + "\nPlease upgrade");
+                                        break;
+                                    }
 
-                                      // check the first hit only
-                                      break;
-                                  }
-                              }
-                          }
-                          catch (Exception ex) { log.Error(ex); }
-                      }
+                                    // check the first hit only
+                                    break;
+                                }
+                            }
+                        }
+                        catch (Exception ex) { log.Error(ex); }
+                    }
 
                     FlightData.CheckBatteryShow();
 
@@ -1136,7 +1140,7 @@ namespace MissionPlanner
             catch { }
         }
 
-        
+
 
         /// <summary>
         /// overriding the OnCLosing is a bit cleaner than handling the event, since it 
@@ -1273,7 +1277,7 @@ namespace MissionPlanner
         protected override void OnFormClosed(FormClosedEventArgs e)
         {
             base.OnFormClosed(e);
-            
+
             Console.WriteLine("MainV2_FormClosed");
 
             if (joystick != null)
@@ -2005,11 +2009,11 @@ namespace MissionPlanner
 
             /// setup joystick packet sender
             joystickthread = new Thread(new ThreadStart(joysticksend))
-             {
-                 IsBackground = true,
-                 Priority = ThreadPriority.AboveNormal,
-                 Name = "Main joystick sender"
-             };
+            {
+                IsBackground = true,
+                Priority = ThreadPriority.AboveNormal,
+                Name = "Main joystick sender"
+            };
             joystickthread.Start();
 
             // setup main serial reader
@@ -2062,6 +2066,8 @@ namespace MissionPlanner
                 log.Info("Load Pluggins Done");
             }
             catch (Exception ex) { log.Error(ex); }
+
+            //SK: we don't need to update the software now. This will be available in the future versions. 
 
 
 
@@ -2116,21 +2122,21 @@ namespace MissionPlanner
             catch { }
 
             // show wizard on first use
-          /*  if (getConfig("newuser") == "")
-            {
-                if (CustomMessageBox.Show("This is your first run, Do you wish to use the setup wizard?\nRecomended for new users.", "Wizard", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
-                {
-                    Wizard.Wizard wiz = new Wizard.Wizard();
+            /*  if (getConfig("newuser") == "")
+              {
+                  if (CustomMessageBox.Show("This is your first run, Do you wish to use the setup wizard?\nRecomended for new users.", "Wizard", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
+                  {
+                      Wizard.Wizard wiz = new Wizard.Wizard();
 
-                    wiz.ShowDialog(this);
+                      wiz.ShowDialog(this);
 
-                }
+                  }
 
-                CustomMessageBox.Show("To use the wizard please goto the initial setup screen, and click the wizard icon.", "Wizard");
+                  CustomMessageBox.Show("To use the wizard please goto the initial setup screen, and click the wizard icon.", "Wizard");
 
-                config["newuser"] = DateTime.Now.ToShortDateString();
-            }
-            */
+                  config["newuser"] = DateTime.Now.ToShortDateString();
+              }
+              */
         }
 
         private void BGCreateMaps(object state)
@@ -2179,129 +2185,145 @@ namespace MissionPlanner
         /// <returns></returns>
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
-            if (keyData == Keys.F12)
-            {
-                MenuConnect_Click(null, null);
-                return true;
-            }
 
-            if (keyData == Keys.F2)
-            {
-                MenuFlightData_Click(null, null);
-                return true;
-            }
-            if (keyData == Keys.F3)
-            {
-                MenuFlightPlanner_Click(null, null);
-                return true;
-            }
-            if (keyData == Keys.F4)
-            {
-                MenuTuning_Click(null, null);
-                return true;
-            }
+            //if (keyData == Keys.F12)
+            //{
+            //    MenuConnect_Click(null, null);
+            //    return true;
+            //}
 
-            if (keyData == Keys.F5)
-            {
-                comPort.getParamList();
-                MyView.ShowScreen(MyView.current.Name);
-                return true;
-            }
+            //if (keyData == Keys.F2)
+            //{
+            //    MenuFlightData_Click(null, null);
+            //    return true;
+            //}
+            //if (keyData == Keys.F3)
+            //{
+            //    MenuFlightPlanner_Click(null, null);
+            //    return true;
+            //}
+            //if (keyData == Keys.F4)
+            //{
+            //    MenuTuning_Click(null, null);
+            //    return true;
+            //}
 
-            if (keyData == (Keys.Control | Keys.F)) // temp
-            {
-                Form frm = new temp();
-                ThemeManager.ApplyThemeTo(frm);
-                frm.Show();
-                return true;
-            }
-            /*if (keyData == (Keys.Control | Keys.S)) // screenshot
-            {
-                ScreenShot();
-                return true;
-            }*/
-            if (keyData == (Keys.Control | Keys.G)) // nmea out
-            {
-                Form frm = new SerialOutputNMEA();
-                ThemeManager.ApplyThemeTo(frm);
-                frm.Show();
-                return true;
-            }
-            if (keyData == (Keys.Control | Keys.X)) // select sysid
-            {
-                MissionPlanner.Controls.SysidSelector id = new SysidSelector();
+            //if (keyData == Keys.F5)
+            //{
+            //    comPort.getParamList();
+            //    MyView.ShowScreen(MyView.current.Name);
+            //    return true;
+            //}
 
-                id.ShowDialog();
-            }
-            if (keyData == (Keys.Control | Keys.L)) // limits
-            {
-                Form temp = new Form();
-                Control frm = new GCSViews.ConfigurationView.ConfigAP_Limits();
-                temp.Controls.Add(frm);
-                temp.Size = frm.Size;
-                frm.Dock = DockStyle.Fill;
-                ThemeManager.ApplyThemeTo(temp);
-                temp.Show();
-                return true;
-            }
-            if (keyData == (Keys.Control | Keys.W)) // test ac config
-            {
-                Wizard.Wizard cfg = new Wizard.Wizard();
+            //if (keyData == (Keys.Control | Keys.F)) // temp
+            //{
+            //    Form frm = new temp();
+            //    ThemeManager.ApplyThemeTo(frm);
+            //    frm.Show();
+            //    return true;
+            //}
 
-                cfg.ShowDialog(this);
+            //SK: display the Hidden menu which is require to calibrate the UAV. 
+            if (keyData == (Keys.Control | Keys.D))
+            {
+                MenuInitConfig.Visible = true;
+                MenuConfigTune.Visible = true;
+                MenuTerminal.Visible = true;
 
                 return true;
             }
-            if (keyData == (Keys.Control | Keys.Z)) // test ac config
-            {
-                MissionPlanner.GenOTP otp = new MissionPlanner.GenOTP();
 
-                otp.ShowDialog(this);
+            if (keyData == (Keys.Control | Keys.H))
+            {
+                MenuInitConfig.Visible = false;
+                MenuConfigTune.Visible = false;
+                MenuTerminal.Visible = false;
 
                 return true;
             }
-            if (keyData == (Keys.Control | Keys.T)) // for override connect
-            {
-                try
-                {
-                    MainV2.comPort.Open(false);
-                }
-                catch (Exception ex) { CustomMessageBox.Show(ex.ToString()); }
-                return true;
-            }
-            if (keyData == (Keys.Control | Keys.Y)) // for ryan beall
-            {
-                // write
-                try
-                {
-                    MainV2.comPort.doCommand(MAVLink.MAV_CMD.PREFLIGHT_STORAGE, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f);
-                }
-                catch { CustomMessageBox.Show("Invalid command"); return true; }
-                //read
-                ///////MainV2.comPort.doCommand(MAVLink09.MAV_CMD.PREFLIGHT_STORAGE, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f);
-                CustomMessageBox.Show("Done MAV_ACTION_STORAGE_WRITE");
-                return true;
-            }
-            if (keyData == (Keys.Control | Keys.J))
-            {
-                /*
-                var test = MainV2.comPort.GetLogList();
 
-                foreach (var item in test)
-                {
-                    var ms = comPort.GetLog(item.id);
 
-                    using (BinaryWriter bw = new BinaryWriter(File.OpenWrite("test" + item.id + ".bin")))
-                    {
-                        bw.Write(ms.ToArray());
-                    }
+            ///*if (keyData == (Keys.Control | Keys.S)) // screenshot
+            //{
+            //    ScreenShot();
+            //    return true;
+            //}*/
+            //if (keyData == (Keys.Control | Keys.G)) // nmea out
+            //{
+            //    Form frm = new SerialOutputNMEA();
+            //    ThemeManager.ApplyThemeTo(frm);
+            //    frm.Show();
+            //    return true;
+            //}
+            //if (keyData == (Keys.Control | Keys.L)) // limits
+            //{
+            //    Form temp = new Form();
+            //    Control frm = new GCSViews.ConfigurationView.ConfigAP_Limits();
+            //    temp.Controls.Add(frm);
+            //    temp.Size = frm.Size;
+            //    frm.Dock = DockStyle.Fill;
+            //    ThemeManager.ApplyThemeTo(temp);
+            //    temp.Show();
+            //    return true;
+            //}
+            //if (keyData == (Keys.Control | Keys.W)) // test ac config
+            //{
+            //    Wizard.Wizard cfg = new Wizard.Wizard();
 
-                    var temp1 = Log.BinaryLog.ReadLog("test" + item.id + ".bin");
+            //    cfg.ShowDialog(this);
 
-                    File.WriteAllLines("test" + item.id + ".log", temp1);
-                }*/
-                return true;
-            }
+            //    return true;
+            //}
+            //if (keyData == (Keys.Control | Keys.Z)) // test ac config
+            //{
+            //    MissionPlanner.GenOTP otp = new MissionPlanner.GenOTP();
+
+            //    otp.ShowDialog(this);
+
+            //    return true;
+            //}
+            //if (keyData == (Keys.Control | Keys.T)) // for override connect
+            //{
+            //    try
+            //    {
+            //        MainV2.comPort.Open(false);
+            //    }
+            //    catch (Exception ex) { CustomMessageBox.Show(ex.ToString()); }
+            //    return true;
+            //}
+            //if (keyData == (Keys.Control | Keys.Y)) // for ryan beall
+            //{
+            //    // write
+            //    try
+            //    {
+            //        MainV2.comPort.doCommand(MAVLink.MAV_CMD.PREFLIGHT_STORAGE, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f);
+            //    }
+            //    catch { CustomMessageBox.Show("Invalid command"); return true; }
+            //    //read
+            //    ///////MainV2.comPort.doCommand(MAVLink09.MAV_CMD.PREFLIGHT_STORAGE, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f);
+            //    CustomMessageBox.Show("Done MAV_ACTION_STORAGE_WRITE");
+            //    return true;
+            //}
+            //if (keyData == (Keys.Control | Keys.J))
+            //{
+            //    /*
+            //    var test = MainV2.comPort.GetLogList();
+
+            //    foreach (var item in test)
+            //    {
+            //        var ms = comPort.GetLog(item.id);
+
+            //        using (BinaryWriter bw = new BinaryWriter(File.OpenWrite("test" + item.id + ".bin")))
+            //        {
+            //            bw.Write(ms.ToArray());
+            //        }
+
+            //        var temp1 = Log.BinaryLog.ReadLog("test" + item.id + ".bin");
+
+            //        File.WriteAllLines("test" + item.id + ".log", temp1);
+            //    }*/
+            //    return true;
+            //}
             return base.ProcessCmdKey(ref msg, keyData);
         }
 
@@ -2495,14 +2517,15 @@ namespace MissionPlanner
             Console.WriteLine("MainV2_KeyDown " + e.ToString());
         }
 
-        private void toolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                System.Diagnostics.Process.Start("https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=mich146%40hotmail%2ecom&lc=AU&item_name=Michael%20Oborne&no_note=0&currency_code=AUD&bn=PP%2dDonationsBF%3abtn_donate_SM%2egif%3aNonHostedGuest");
-            }
-            catch { CustomMessageBox.Show("Link open failed. check your default webpage association"); }
-        }
+        //private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        //{
+        //    try
+        //    {
+        //        System.Diagnostics.Process.Start("https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=mich146%40hotmail%2ecom&lc=AU&item_name=Michael%20Oborne&no_note=0&currency_code=AUD&bn=PP%2dDonationsBF%3abtn_donate_SM%2egif%3aNonHostedGuest");
+        //    }
+        //    catch { CustomMessageBox.Show("Link open failed. check your default webpage association"); }
+        //}
+        //SK: We don't need to invoke this webpage anymore!
 
         [StructLayout(LayoutKind.Sequential)]
         internal class DEV_BROADCAST_HDR
@@ -2674,7 +2697,8 @@ namespace MissionPlanner
                 else
                 {
                     item.BackColor = Color.Transparent;
-                    item.BackgroundImage = MissionPlanner.Properties.Resources.bgdark;//.BackColor = Color.Black;
+                    // item.BackgroundImage = MissionPlanner.Properties.Resources.bgdark;//.BackColor = Color.Black;
+                    item.BackgroundImage = MissionPlanner.Properties.Resources.bg; //SK: keep the color to grey.
                 }
             }
             //MainMenu.BackColor = Color.Black;
@@ -2702,6 +2726,6 @@ namespace MissionPlanner
         private void readonlyToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MainV2.comPort.ReadOnly = readonlyToolStripMenuItem.Checked;
-        }    
+        }
     }
 }

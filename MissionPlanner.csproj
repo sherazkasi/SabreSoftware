@@ -6225,6 +6225,8 @@
     <None Include="Resources\calibration06.jpg" />
     <None Include="Resources\calibration07.jpg" />
     <None Include="Resources\FW icons Y6.png" />
+    <None Include="Resources\FightDataIcon.png" />
+    <None Include="Resources\FlightSimulation1.png" />
     <Content Include="Resources\guagebg.jpg" />
     <None Include="Resources\Hframe.png" />
     <None Include="Resources\Hframelight.png" />
@@ -6245,6 +6247,9 @@
     <None Include="Resources\marker_06.png" />
     <None Include="Resources\marker_07.png" />
     <None Include="Resources\heli.png" />
+    <None Include="Resources\InitialConfig.png" />
+    <None Include="Resources\InitialSetup.png" />
+    <None Include="Resources\Help1.png" />
     <Content Include="Resources\MAVCmd.zh-TW.txt" />
     <Content Include="Resources\MAVParam.zh-TW.txt" />
     <Content Include="Resources\new frames-01.png" />
@@ -6258,7 +6263,12 @@
     <None Include="Resources\PlusFramesGreen_06.png" />
     <None Include="Resources\pixhawk.jpg" />
     <Content Include="Resources\rover.png" />
+    <None Include="Resources\Sabre120x30.png" />
+    <None Include="Resources\Sabre Logo.png" />
+    <None Include="Resources\SabreSky SplashScreen.png" />
     <Content Include="Resources\splash.jpg" />
+    <None Include="Resources\worldwide51.png" />
+    <None Include="Resources\terminal1.png" />
     <Content Include="Scripts\datetime.py">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
